@@ -47,7 +47,7 @@ The API resources are accessible at [localhost:8000/api/v1/](http://127.0.0.1:80
 | -------- | ------------- | --------- |
 | `/api/v1/` | GET  | The index |
 | `/api/v1/schools/` | GET, POST | Schools |
-| `/api/v/schools/<id>/` | GET, PUT, DELETE | A single school |
+| `/api/v1/schools/<id>/` | GET, PUT, DELETE | A single school |
 | `/api/v1/students/` | GET, POST | Students |
 | `/api/v1/students/<id>/` | GET, PUT, DELETE| A single student |
 

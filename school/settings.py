@@ -29,15 +29,22 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+PROJECT_APPS = [
+    'api_v1',
+]
 
-INSTALLED_APPS = [
+DEPENDENCY_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
+
+INSTALLED_APPS = PROJECT_APPS + DEPENDENCY_APPS
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -24,10 +24,9 @@ class StudentTest(APITestCase):
             gender='MIXED')
     def test_student_creation(self):
         """Test creating a student object."""
-        import ipdb; ipdb.set_trace()
         student = Student.objects.create(
             name='Masha', date_of_birth=datetime.datetime.today(),
             school=self.school, class_level=4, gender='female'
         )
-        # self.assertEqual(1, Student.objects.count())
+        self.assertEqual(1, Student.objects.count())
         self.assertEqual(student.gender, 'female')

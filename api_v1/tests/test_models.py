@@ -16,7 +16,7 @@ class SchoolTest(APITestCase):
         self.assertEqual(school.name, 'Shule')
 
 
-class Student(APITestCase):
+class StudentTest(APITestCase):
     def setUp(self):
         self.school = School.objects.create(
             name='Shule', email='shule@ymail.com', 
@@ -24,9 +24,10 @@ class Student(APITestCase):
             gender='MIXED')
     def test_student_creation(self):
         """Test creating a student object."""
+        import ipdb; ipdb.set_trace()
         student = Student.objects.create(
             name='Masha', date_of_birth=datetime.datetime.today(),
             school=self.school, class_level=4, gender='female'
         )
         # self.assertEqual(1, Student.objects.count())
-        self.assertEqual(student.gender, 'FEMALE')
+        self.assertEqual(student.gender, 'female')

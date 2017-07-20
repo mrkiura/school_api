@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class School(models.Model):
+    """Model representing the school entity."""
     type_choices = (
         ('day', 'DAY'),
         ('boarding', 'BOARDING'),
@@ -25,6 +26,7 @@ class School(models.Model):
 
     
 class Student(models.Model):
+    """Model representing the student entity."""
     gender_choices = (
         ('male', 'MALE'),
         ('female', 'FEMALE'),

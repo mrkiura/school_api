@@ -24,3 +24,15 @@ class School(models.Model):
     category = models.CharField(max_length=15, choices=category_choices, null=False)
 
     
+class Student(models.Model):
+    gender_choices = (
+        ('male', 'MALE'),
+        ('female', 'FEMALE'),
+        ('other', 'OTHER')
+    )
+    name = models.CharField(max_length=255, blank=False, null=False)
+    date_of_birth = models.DateField()
+    school = models.ForeignKey(
+        School, related_name='students', on_delete=models.CASCADE)
+    class_level = models.IntegerField()
+    gender = models.CharField(max_length=6, choices=gender_choices)

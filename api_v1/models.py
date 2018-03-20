@@ -41,3 +41,10 @@ class Student(models.Model):
         School, related_name='students', on_delete=models.CASCADE)
     class_level = models.IntegerField()
     gender = models.CharField(max_length=6, choices=gender_choices)
+
+
+class Teacher(models.Model):
+    username = models.CharField(unique=True, max_length=200)
+
+class HeadTeacher(models.Model):
+    username = models.CharField(unique=False, max_length=250)

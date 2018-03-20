@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
 class School(models.Model):
     """Model representing the school entity."""
     type_choices = (
@@ -24,7 +24,7 @@ class School(models.Model):
     gender = models.CharField(max_length=15, choices=gender_choices, null=False)
     category = models.CharField(max_length=15, choices=category_choices, null=False)
 
-    
+
 class Student(models.Model):
     """Model representing the student entity."""
     gender_choices = (

@@ -20,9 +20,12 @@ class School(models.Model):
     )
     name = models.CharField(max_length=255, blank=False, null=False)
     email = models.EmailField(max_length=200, blank=True)
-    school_type = models.CharField(max_length=15, choices=type_choices, null=False)
-    gender = models.CharField(max_length=15, choices=gender_choices, null=False)
-    category = models.CharField(max_length=15, choices=category_choices, null=False)
+    school_type = models.CharField(
+        max_length=15, choices=type_choices, null=False)
+    gender = models.CharField(
+        max_length=15, choices=gender_choices, null=False)
+    category = models.CharField(
+        max_length=15, choices=category_choices, null=False)
 
 
 class Student(models.Model):
